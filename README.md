@@ -4,7 +4,7 @@
 <div align="center">
   <a href="https://github.com/BelalHassan7/Truncatable_Primes">
   </a>
-<h3 align="center">Truncatable_Primes</h3>
+<h3 align="center">Truncatable Primes</h3>
   <p align="center">
     <br />
     <a href="https://github.com/BelalHassan7/Truncatable_Primes"><strong>Explore the docs »</strong></a>
@@ -30,7 +30,7 @@
       </ul>
     </li>
     <li>
-      <a href="#Functions">Functions</a>
+      <a href="#Functions & Definitions">Functions & Definitions</a>
     </li>
     <li><a href="#Contact">Contact</a></li>
   </ol>
@@ -38,38 +38,45 @@
 
 ## About The Project
 
-This library proviedes the user with functions for finding truncatable primes: 
+This library proviedes the user with Functions & Definitions for finding truncatable primes: 
 
 1. Left-truncatable primes
 2. right-truncatable priems
-3. left-and-right-truncatable primes
+3. left-and-right-truncatable primes.
 4. primes that are both left and right truncatable primes. 
 
-The last two types of primes are not the same: left-and-right truncatable primes are primes that stay primes by removing their left and right digits, but the last one is a left-truncatable prime and a right-truncatable prime at the same time. 
-
-Note: Functions for left-and-right truncatable primes are still under construction.
+The last two types of primes are not the same: left-and-right truncatable primes are primes that stay primes by removing their left and right digits simultaneously, but the last one is a left-truncatable prime and a right-truncatable prime at the same time. 
 
 ### Built With
 
 * [![visual][visual.js]][visual-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Functions
+## Functions & Definitions
 
+* `uint64` is the type used for an unsigned long long int.
 
-* `bool isPrime(int num)` checks if a num is prime.
+* `uint32` is the type used for an int.
 
-* `bool isRTP(int num)` checks if a num is a right-truncatable prime (RTP).
+* `uint8` is the type used for a char.
 
-* `bool isLTP(int num)` checks if a num is a left-truncatable prime (LTP).
+* `bool isPrime(uint64 num)` checks if a num is prime.
 
-* `bool isTP(int num)` checks if a num is a RTP and a LTP at the same time (TP).
+* `bool isRTP(uint64 num)` checks if a num is a right-truncatable prime (RTP).
 
-* `void RTPs(int n)` outputs all n-digit RTPs. 
+* `bool isLTP(uint64 num)` checks if a num is a left-truncatable prime (LTP).
 
-* `void LTPs(int n)` outputs all n-digit LTPs. 
+* `bool isLRTP(uint64 num)` checks if a num is a left-and-right truncatable prime (LRTP).
 
-* `void TPs(int n)` outputs all n-digit TPs. 
+* `bool isTP(uint64 num)` checks if a num is an RTP and an LTP at the same time (TP).
+
+* `void RTPs(uint8 n)` outputs all n-digit RTPs. 
+
+* `void LTPs(uint8 n)` outputs all n-digit LTPs. 
+
+* `void LRTPs(uint8 n)` outputs all n-digit LRTPs.
+
+* `void TPs(uint8 n)` outputs all n-digit TPs.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
