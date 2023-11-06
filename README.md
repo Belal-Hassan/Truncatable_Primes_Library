@@ -2,19 +2,19 @@
 <hr>
 <br />
 <div align="center">
-  <a href="https://github.com/BelalHassan7/Truncatable_Primes">
+  <a href="https://github.com/Belal-Hassan/Truncatable_Primes_Library">
   </a>
 <h3 align="center">Truncatable Primes</h3>
   <p align="center">
     <br />
-    <a href="https://github.com/BelalHassan7/Truncatable_Primes"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Belal-Hassan/Truncatable_Primes_Library"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/BelalHassan7/Truncatable_Primes">View Demo</a>
+    <a href="https://github.com/Belal-Hassan/Truncatable_Primes_Library">View Demo</a>
     ·
-    <a href="https://github.com/BelalHassan7/Truncatable_Primes/issues">Report Bug</a>
+    <a href="https://github.com/Belal-Hassan/Truncatable_Primes_Library/issues">Report Bug</a>
     ·
-    <a href="https://github.com/BelalHassan7/Truncatable_Primes/issues">Request Feature</a>
+    <a href="https://github.com/Belal-Hassan/Truncatable_Primes_Library/issues">Request Feature</a>
   </p>
 </div>
 <hr>
@@ -81,9 +81,9 @@ The last two types of primes are not the same: left-and-right truncatable primes
 
 ## Contact
 
-Belal - belal.34327@gmail.com
+Belal - belal.34327@gmail.com, bilal.1021023@stemegypt.edu.eg
 
-Project Link: [https://github.com/BelalHassan7/Truncatable_Primes](https://github.com/BelalHassan7/Truncatable_Primes.git)
+Project Link: [https://github.com/Belal-Hassan/Truncatable_Primes_Library](https://github.com/Belal-Hassan/Truncatable_Primes_Library.git)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [visual.js]: https://img.shields.io/badge/Visual-Studio?style=for-the-badge&logo=visual%20studio&logoColor=800080&labelColor=000000&color=000000
