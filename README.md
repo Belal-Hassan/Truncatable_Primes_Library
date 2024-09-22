@@ -24,64 +24,74 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#About-The-Project">About The Project</a>
-      <ul>
-        <li><a href="#Built-With">Built With</a></li>
-      </ul>
+      <a href="#about">About The Project</a>
     </li>
     <li>
-      <a href="#Functions & Definitions">Functions & Definitions</a>
+      <a href="#functions">Functions & Definitions</a>
     </li>
-    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
 ## About The Project
+<section id="about"> </section>
 
-This library proviedes the user with Functions & Definitions for finding truncatable primes: 
+This library proviedes the user with Functions & Definitions for finding 3 types of truncatable primes: 
 
-1. Left-truncatable primes
-2. right-truncatable priems
-3. left-and-right-truncatable primes.
-4. primes that are both left and right truncatable primes. 
+1. Left-truncatable primes.
+2. right-truncatable priems.
+3. two-sided primes (1 & 2 at the same time).
 
-The last two types of primes are not the same: left-and-right truncatable primes are primes that stay primes by removing their left and right digits simultaneously, but the last one is a left-truncatable prime and a right-truncatable prime at the same time. 
+The code starts with a vector containing the initial primes `(2, 3, 5, 7)` for right truncatable primes. It then iteratively extends the primes by appending digits `(1, 3, 7, 9)` to its right end. For left truncatable primes, the vector starts with `(3, 7)` only (`5` and `2` will always make the number divisible), and then appends the numbers from `1` till `9` to the left. After each extension, the primality of the new numbers is checked. This process continues until the desired length is reached.
 
-### Built With
+This approach is a dynamic programming approach to efficiently generate truncatable primes. It applies the concepts of subproblem overlap and optimal substructure:
 
-* [![visual][visual.js]][visual-url]
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Subproblem Overlap
+The code iteratively constructs truncatable primes by appending digits to existing primes. This leads to overlapping subproblems, as the process of finding truncatable primes of length `n-1` is utilized to generate primes of length `n`, which boosts the time effeciency of the code.
+
+### Optimal Substructure
+The optimal solution (a truncatable prime of length `n`) can be derived from optimal solutions of smaller subproblems (truncatable primes of length `n-1`). This property allows for a recursive or iterative bottom-up construction of the final solution.
+
+### Old vs New Runtime
+
+| Function | Old | New |
+|   ---    |    ---   |    ---   |
+|`LTPs(6)` |    19s   |   0.12s  |
+|`LTPs(7)` |    493s   |  0.35s  |
+|`RTPs(8)` |    1h+   |   0.03s  |
 
 ## Functions & Definitions
+<section id="functions"> </section>
+
+* `vect64` is the type used for an vector\<unsigned long long int\>.
 
 * `uint64` is the type used for an unsigned long long int.
 
-* `uint32` is the type used for an int.
+* `uint32` is the type used for unsigned int.
 
-* `uint8` is the type used for a char.
+* `uint16` is the type used for unsigned short int.
 
-* `bool isPrime(uint64 num)` checks if a num is prime.
+* `uint8` is the type used for a unsigned char.
 
-* `bool isRTP(uint64 num)` checks if a num is a right-truncatable prime (RTP).
+* `bool isPrime(uint64 num)` checks if num is prime.
 
-* `bool isLTP(uint64 num)` checks if a num is a left-truncatable prime (LTP).
+* `bool isRTP(uint64 num)` checks if num is a right-truncatable prime (RTP).
 
-* `bool isLRTP(uint64 num)` checks if a num is a left-and-right truncatable prime (LRTP).
+* `bool isLTP(uint64 num)` checks if num is a left-truncatable prime (LTP).
 
-* `bool isTP(uint64 num)` checks if a num is an RTP and an LTP at the same time (TP).
+* `bool isTSP(uint64 num)` checks if num is an RTP and an LTP at the same time (TP).
 
-* `void RTPs(uint8 n)` outputs all n-digit RTPs. 
+* `void RTPs(uint8 n)` outputs all n-digit right-truncatable primes. 
 
-* `void LTPs(uint8 n)` outputs all n-digit LTPs. 
+* `void LTPs(uint8 n)` outputs all n-digit left-truncatable primes. 
 
-* `void LRTPs(uint8 n)` outputs all n-digit LRTPs.
-
-* `void TPs(uint8 n)` outputs all n-digit TPs.
+* `void TSPs(uint8 n)` outputs all n-digit two-sided primes (left truncatable and right truncatable at the same time).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
+<section id="contact"> </section>
 
-Belal - belal.34327@gmail.com, bilal.1021023@stemegypt.edu.eg
+Belal - belal.hassan.kh@gmail.com, bilal.1021023@stemegypt.edu.eg
 
 Project Link: [https://github.com/Belal-Hassan/Truncatable_Primes_Library](https://github.com/Belal-Hassan/Truncatable_Primes_Library.git)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
