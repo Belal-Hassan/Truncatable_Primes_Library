@@ -102,13 +102,12 @@ vect64 RTPs(uint8 n) //output all n-digit right-truncatable primes.
       		for (uint8 oddCounter = 0; oddCounter < 4; oddCounter++)
       		{
         		tempNumber = rightNumberCombined(RTPvector[vectCounter], odds[oddCounter]); 
-        		if(isPrime(tempNumber))
+        		if(isRTP(tempNumber))
           			RTPvector.push_back(tempNumber);
       		}
     	}
     	RTPvector.erase(RTPvector.begin(), RTPvector.begin() + vectSize);
   	}
-	RTPvector.erase(remove_if(RTPvector.begin(), RTPvector.end(), [](uint64 num) {return !isRTP(num);}), RTPvector.end());
 	return RTPvector;
 }
 vect64 LTPs(uint8 n) //outputs all n-digit left-truncatable primes.
@@ -127,13 +126,12 @@ vect64 LTPs(uint8 n) //outputs all n-digit left-truncatable primes.
       		for (uint8 number = 1; number < 10; number++)
       		{
         		tempNumber = leftNumberCombined(LTPvector[vectCounter], number);
-        		if(isPrime(tempNumber))
+        		if(isLTP(tempNumber))
           			LTPvector.push_back(tempNumber);
       		}
     	}
     	LTPvector.erase(LTPvector.begin(), LTPvector.begin() + vectSize);
   	}
-	LTPvector.erase(remove_if(LTPvector.begin(), LTPvector.end(), [](uint64 num) {return !isLTP(num);}), LTPvector.end());
 	return LTPvector;
 }
 vect64 TSPs(uint8 n) //Outputs all n-digit numbers that are right truncatable primes and left truncatable primes at the same time (Two-sided Primes).
@@ -152,13 +150,12 @@ vect64 TSPs(uint8 n) //Outputs all n-digit numbers that are right truncatable pr
       		for (uint8 oddCounter = 0; oddCounter < 4; oddCounter++)
       		{
         		tempNumber = rightNumberCombined(TSPvector[vectCounter], odds[oddCounter]);
-        		if(isPrime(tempNumber))
+        		if(isRTP(tempNumber))
           			TSPvector.push_back(tempNumber);
       		}
     	}
     	TSPvector.erase(TSPvector.begin(), TSPvector.begin() + vectSize);
   	}
-	TSPvector.erase(remove_if(TSPvector.begin(), TSPvector.end(), [](uint64 num) {return !isRTP(num);}), TSPvector.end());
   	TSPvector.erase(remove_if(TSPvector.begin(), TSPvector.end(), [](uint64 num) {return !isLTP(num);}), TSPvector.end());
 	return TSPvector;
 }
