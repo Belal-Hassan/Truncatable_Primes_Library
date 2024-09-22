@@ -39,8 +39,8 @@
 This library proviedes the user with Functions & Definitions for finding 3 types of truncatable primes: 
 
 1. Left-truncatable primes.
-2. right-truncatable priems.
-3. two-sided primes (1 & 2 at the same time).
+2. Right-truncatable priems.
+3. Two-sided primes (1 & 2 at the same time).
 
 The code starts with a vector containing the initial primes `(2, 3, 5, 7)` for right truncatable primes. It then iteratively extends the primes by appending digits `(1, 3, 7, 9)` to its right end. For left truncatable primes, the vector starts with `(3, 7)` only (`5` and `2` will always make the number divisible), and then appends the numbers from `1` till `9` to the left. After each extension, the primality of the new numbers is checked. This process continues until the desired length is reached.
 
@@ -81,11 +81,11 @@ The optimal solution (a truncatable prime of length `n`) can be derived from opt
 
 * `bool isTSP(uint64 num)` checks if num is an RTP and an LTP at the same time (TP).
 
-* `void RTPs(uint8 n)` outputs all n-digit right-truncatable primes. 
+* `vect64 RTPs(uint8 n)` returns a vector with all n-digit right-truncatable primes. 
 
-* `void LTPs(uint8 n)` outputs all n-digit left-truncatable primes. 
+* `vect64 LTPs(uint8 n)` returns a vector with all n-digit left-truncatable primes. 
 
-* `void TSPs(uint8 n)` outputs all n-digit two-sided primes (left truncatable and right truncatable at the same time).
+* `vect64 TSPs(uint8 n)` returns a vector with all n-digit two-sided primes (left truncatable and right truncatable at the same time).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
